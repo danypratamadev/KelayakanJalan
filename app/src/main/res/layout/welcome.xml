@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/back_alert_parent"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_info_black_36dp"
+        android:layout_marginTop="15dp"
+        android:tint="@color/WindowBgActiveDark"/>
+
+    <TextView
+        android:id="@+id/NRU_DIS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fengardoneue_regular"
+        android:text="KELAIKAN JALAN"
+        android:textColor="@color/Gray900"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray300"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sansui_regular"
+        android:text="Hai, Selamat Bekerja"
+        android:textColor="@color/Gray700"
+        android:textSize="13sp"
+        android:lineSpacingExtra="5dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray300"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/White100T"
+            android:textColor="@color/WindowBgActiveDark"
+            android:layout_weight="1"
+            android:text="OKE"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/fengardoneue_regular"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="230dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_alert_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/proses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sansui_regular"
+            android:text="Saving"
+            android:textColor="@color/WindowBgActiveDark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sansui_regular"
+            android:text="Mohon tunggu..."
+            android:textColor="@color/Gray700"
+            android:textSize="11dp"
+            android:textAlignment="center"/>
+
+        <com.eyalbira.loadingdots.LoadingDots
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:LoadingDots_auto_play="true"
+            app:LoadingDots_dots_color="@color/WindowBgActiveDark"
+            app:LoadingDots_dots_count="5"
+            app:LoadingDots_dots_size="10dp"
+            app:LoadingDots_dots_space="5dp"
+            app:LoadingDots_loop_duration="1000"
+            app:LoadingDots_loop_start_delay="100"
+            app:LoadingDots_jump_duration="500"
+            app:LoadingDots_jump_height="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

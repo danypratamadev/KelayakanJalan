@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ascen"
+        android:title="Ascending"
+        android:icon="@drawable/ic_sort_by_alpha_orange_300_18dp"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/descen"
+        android:title="Descending"
+        android:icon="@drawable/ic_sort_by_alpha_orange_300_18dp"
+        android:enabled="true"
+        />
+
+</menu>

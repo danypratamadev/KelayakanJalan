@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/satu_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Dokumen Penetapan, Petunjuk,\nPerintah dan Larangan"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:gravity="center"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Ketersediaan"/>
+
+                <TextView
+                    android:id="@+id/ktd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kelengkapan Informasi" />
+
+                <TextView
+                    android:id="@+id/kli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Legalitas"/>
+
+                <TextView
+                    android:id="@+id/lgt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/klf1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Rekomendasi"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rec_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray900"
+                android:textSize="12sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="-"
+                android:textAlignment="textStart"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dua_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/success_style">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Dokumen Penetapan Status Jalan"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:gravity="center"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Ketersediaan"/>
+
+                <TextView
+                    android:id="@+id/ktd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kelengkapan Informasi" />
+
+                <TextView
+                    android:id="@+id/kli2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Legalitas"/>
+
+                <TextView
+                    android:id="@+id/lgt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/klf2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Rekomendasi"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rec_data2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray900"
+                android:textSize="12sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="-"
+                android:textAlignment="textStart"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tiga_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/success_style">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Dokumen Penetapan Kelas Jalan"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:gravity="center"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Ketersediaan"/>
+
+                <TextView
+                    android:id="@+id/ktd3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kelengkapan Informasi" />
+
+                <TextView
+                    android:id="@+id/kli3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Legalitas"/>
+
+                <TextView
+                    android:id="@+id/lgt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/klf3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Rekomendasi"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rec_data3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray900"
+                android:textSize="12sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="-"
+                android:textAlignment="textStart"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/empat_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/success_style">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Dokumen Penetapan Kepemilikan\nTanah"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:gravity="center"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Ketersediaan"/>
+
+                <TextView
+                    android:id="@+id/ktd4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kelengkapan Informasi" />
+
+                <TextView
+                    android:id="@+id/kli4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Legalitas"/>
+
+                <TextView
+                    android:id="@+id/lgt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/klf4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Rekomendasi"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rec_data4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray900"
+                android:textSize="12sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="-"
+                android:textAlignment="textStart"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lima_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/success_style">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Dokumen Penetapan Leger Jalan"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:gravity="center"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Ketersediaan"/>
+
+                <TextView
+                    android:id="@+id/ktd5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kelengkapan Informasi" />
+
+                <TextView
+                    android:id="@+id/kli5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Legalitas"/>
+
+                <TextView
+                    android:id="@+id/lgt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/klf5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Rekomendasi"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rec_data5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray900"
+                android:textSize="12sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="-"
+                android:textAlignment="textStart"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/enam_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/success_style">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Dokumen Amdal/Dokumen\nLingkungan"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:gravity="center"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Ketersediaan"/>
+
+                <TextView
+                    android:id="@+id/ktd6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kelengkapan Informasi" />
+
+                <TextView
+                    android:id="@+id/kli6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Legalitas"/>
+
+                <TextView
+                    android:id="@+id/lgt6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/klf6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Rekomendasi"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rec_data6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray900"
+                android:textSize="12sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="-"
+                android:textAlignment="textStart"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

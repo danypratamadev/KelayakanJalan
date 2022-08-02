@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/kordinat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    tools:context=".A133Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_3">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                android:background="@color/White100T"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/fontku"
+                android:text="LAIK JALAN"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                android:paddingTop="3dp"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:orientation="horizontal"
+            android:background="@color/White"
+            android:focusableInTouchMode="true"
+            android:paddingTop="25dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp"
+            android:focusable="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sansui_regular"
+                android:text="A.1.3.3 LENGKUNG VERTIKAL"
+                android:textColor="@color/Gray900"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/ktg_klf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fengardoneue_regular"
+                android:text="HASIL"
+                android:textColor="@color/Gray900"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:textAlignment="center"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_centerVertical="true"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/judul"
+            android:background="@color/Gray300"/>
+
+        <com.chauthai.overscroll.RecyclerViewBouncy
+            android:id="@+id/a133_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            app:tension="1000"
+            app:friction="200"
+            app:gapLimit="220"
+            app:speedFactor="5"
+            app:viewCountEstimateSize="5"
+            app:maxAdapterSizeToEstimate="20">
+
+
+        </com.chauthai.overscroll.RecyclerViewBouncy>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/a133_recycler">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:id="@+id/INPUT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketajaman Lengkungan"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Lengkung Parabola"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="Lengkungan berupa lengkung parabola maka: 100%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/LKB"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Landai max"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="Kelandaian maksimal sesuai standar teknis. ex: 5%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/KLM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginRight="2.5dp">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Cembung"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    app:helperText="ex: 2000 m"
+                                    app:counterMaxLength="5"
+                                    app:counterEnabled="true"
+                                    app:helperTextEnabled="true">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/KCB"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="14sp"
+                                        android:inputType="numberDecimal"
+                                        android:maxLength="5"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="m"
+                                    android:fontFamily="@font/sansui_regular"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/Gray600"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="18dp"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="2.5dp">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Cekung"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    app:helperText="ex: 1600 m"
+                                    app:counterMaxLength="5"
+                                    app:counterEnabled="true"
+                                    app:helperTextEnabled="true">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/KCK"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="14sp"
+                                        android:inputType="numberDecimal"
+                                        android:maxLength="5"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="m"
+                                    android:fontFamily="@font/sansui_regular"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/Gray600"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="18dp"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="2.5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Jarak Pandang"
+                                android:textColor="@color/Gray700"
+                                android:textSize="13sp"
+                                android:paddingLeft="5dp"/>
+
+                            <Spinner
+                                android:id="@+id/SJPD"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:layout_marginTop="5dp"
+                                android:entries="@array/jenis_kota"
+                                android:background="@drawable/edit_text"
+                                android:spinnerMode="dropdown"
+                                android:theme="@style/spinner_style">
+                            </Spinner>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="* Pilih salah satu"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sansui_regular"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="1dp"/>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="2.5dp"
+                            android:layout_marginTop="18dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Landai Max"
+                                android:layout_weight="1"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="ex: 5%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/JLM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="2.5dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="JPH"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="ex: 100 m"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/JPH"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="m"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="2.5dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="JPM"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="ex: 300 m"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/JPM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="m"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Arah Jalan dibalik Lengkungan"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Tikungan tajam"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="Tikungan yang tajam pada bagian bawah lengkung \nvertikal cekung atau pada bagian atas lengkung \nvertikal cembung harus dihindarkan. maka: 100%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/AJL1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TIFJL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Tikungan Horizontal"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="Dua atau lebih lengkung vertikal dalam satu \ntikungan horizontal harus dihindarkan. maka: 100%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/AJL2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kombinasi Lengkung Vertikal dan tikungan Horizontal"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Vertikal berhimpit"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="Lengkung vertikal sebaiknya berhimpit dengan \ntikungan horizontal. maka: 100%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/KVH1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Vertikal dihindarkan"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="Tikungan tajam pada lengkung vertikal harus \ndihindarkan. maka: 100%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/KVH2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Cekung dihindarkan"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="Lengkung vertikal cekung pada jalan lurus panjang \nharus dihindarkan. maka: 100%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/KVH3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="2 Lengkung dihindarkan"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="2 lengkung vertikal pada 1 tikungan horizontal \nharus dihindarkan. maka: 100%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/KVH4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:hint="Tikungan tajam dihindarkan"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:helperText="Tikungan tajam pada 2 bagian jalan lurus dan \npanjang harus dihindarkan. maka: 100%"
+                                app:counterMaxLength="5"
+                                app:counterEnabled="true"
+                                app:helperTextEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/KVH5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="4"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:fontFamily="@font/sansui_regular"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gray600"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="18dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rekomendasi"
+                        android:layout_marginTop="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:helperText="*Optional"
+                        app:counterMaxLength="500"
+                        app:counterEnabled="true"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/REC"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:textSize="14sp"
+                            android:gravity="left|top"
+                            android:inputType="textMultiLine"
+                            android:maxLength="500"
+                            android:textAlignment="textStart"
+                            tools:ignore="RtlCompat" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/Gray300"
+                        android:layout_marginTop="12dp"/>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:layout_marginTop="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="210dp"
+                                android:layout_height="160dp">
+
+                                <ImageView
+                                    android:id="@+id/FT1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/back_foto"
+                                    android:layout_margin="5dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/aksi2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_centerInParent="true">
+
+                                    <ImageButton
+                                        android:id="@+id/take"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_camera_alt_grey_600_24dp"
+                                        android:background="@drawable/back_button"
+                                        android:padding="10dp"/>
+
+                                    <RelativeLayout
+                                        android:layout_width="20dp"
+                                        android:layout_height="40dp"/>
+
+                                    <ImageButton
+                                        android:id="@+id/open"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_folder_open_grey_600_24dp"
+                                        android:background="@drawable/back_button"
+                                        android:padding="10dp"/>
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:id="@+id/clear"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_close_red_400_18dp"
+                                    android:background="@drawable/back_button"
+                                    android:backgroundTint="@color/White"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="10dp"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="210dp"
+                                android:layout_height="160dp">
+
+                                <ImageView
+                                    android:id="@+id/FT2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/back_foto"
+                                    android:layout_margin="5dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/aksi3"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_centerInParent="true">
+
+                                    <ImageButton
+                                        android:id="@+id/take1"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_camera_alt_grey_600_24dp"
+                                        android:background="@drawable/back_button"
+                                        android:padding="10dp"/>
+
+                                    <RelativeLayout
+                                        android:layout_width="20dp"
+                                        android:layout_height="40dp"/>
+
+                                    <ImageButton
+                                        android:id="@+id/open1"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_folder_open_grey_600_24dp"
+                                        android:background="@drawable/back_button"
+                                        android:padding="10dp"/>
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:id="@+id/clear1"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_close_red_400_18dp"
+                                    android:background="@drawable/back_button"
+                                    android:backgroundTint="@color/White"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="10dp"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="210dp"
+                                android:layout_height="160dp">
+
+                                <ImageView
+                                    android:id="@+id/FT3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/back_foto"
+                                    android:layout_margin="5dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/aksi4"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_centerInParent="true">
+
+                                    <ImageButton
+                                        android:id="@+id/take2"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_camera_alt_grey_600_24dp"
+                                        android:background="@drawable/back_button"
+                                        android:padding="10dp"/>
+
+                                    <RelativeLayout
+                                        android:layout_width="20dp"
+                                        android:layout_height="40dp"/>
+
+                                    <ImageButton
+                                        android:id="@+id/open2"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_folder_open_grey_600_24dp"
+                                        android:background="@drawable/back_button"
+                                        android:padding="10dp"/>
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:id="@+id/clear2"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_close_red_400_18dp"
+                                    android:background="@drawable/back_button"
+                                    android:backgroundTint="@color/White"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="10dp"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="210dp"
+                                android:layout_height="160dp">
+
+                                <ImageView
+                                    android:id="@+id/FT4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/back_foto" />
+
+                                <LinearLayout
+                                    android:id="@+id/aksi5"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_centerInParent="true">
+
+                                    <ImageButton
+                                        android:id="@+id/take3"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_camera_alt_grey_600_24dp"
+                                        android:background="@drawable/back_button"
+                                        android:padding="10dp"/>
+
+                                    <RelativeLayout
+                                        android:layout_width="20dp"
+                                        android:layout_height="40dp"/>
+
+                                    <ImageButton
+                                        android:id="@+id/open3"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_folder_open_grey_600_24dp"
+                                        android:background="@drawable/back_button"
+                                        android:padding="10dp"/>
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:id="@+id/clear3"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_close_red_400_18dp"
+                                    android:background="@drawable/back_button"
+                                    android:backgroundTint="@color/White"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="10dp"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <Button
+                        android:id="@+id/SAVE"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/btn_style"
+                        android:fontFamily="@font/fengardoneue_regular"
+                        android:layout_marginTop="30dp"
+                        android:text="Simpan"
+                        android:textAlignment="center"
+                        android:textColor="@color/White"
+                        android:textSize="14sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="30dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/aksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true">
+
+            <com.github.jorgecastilloprz.FABProgressCircle
+                android:id="@+id/fab_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                app:finalIcon="@drawable/ic_done_white_18dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_file_upload_white_18dp"
+                    android:layout_margin="5dp"/>
+
+            </com.github.jorgecastilloprz.FABProgressCircle>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fab_upload"
+                android:src="@drawable/ic_mode_edit_white_18dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pratama.kelayakanjalan">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="@string/app_name"
+        android:icon="@mipmap/laik_jalan"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".CompressActivity"></activity>
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".AdministrasiActivity" />
+        <activity android:name=".ImageViewActivity" />
+        <activity android:name=".FilterActivity" />
+        <activity android:name=".A6B8Activity" />
+        <activity android:name=".A6B7Activity" />
+        <activity android:name=".A6B6Activity" />
+        <activity android:name=".A6B5Activity" />
+        <activity android:name=".A6B4Activity" />
+        <activity android:name=".A6B3Activity" />
+        <activity android:name=".A6B2Activity" />
+        <activity android:name=".A6B1Activity" />
+        <activity android:name=".A6A7Activity" />
+        <activity android:name=".A6A6Activity" />
+        <activity android:name=".A6A5Activity" />
+        <activity android:name=".A6A4Activity" />
+        <activity android:name=".A6A3Activity" />
+        <activity android:name=".A6A2Activity" />
+        <activity android:name=".A6A1Activity" />
+        <activity android:name=".A55Activity" />
+        <activity android:name=".A57Activity" />
+        <activity android:name=".A56Activity" />
+        <activity android:name=".A54Activity" />
+        <activity android:name=".A53Activity" />
+        <activity android:name=".A52Activity" />
+        <activity android:name=".A51Activity" />
+        <activity android:name=".A43Activity" />
+        <activity android:name=".A42Activity" />
+        <activity android:name=".A41Activity" />
+        <activity android:name=".A36Activity" />
+        <activity android:name=".A35Activity" />
+        <activity android:name=".A34Activity" />
+        <activity android:name=".A33Activity" />
+        <activity android:name=".A32Activity" />
+        <activity android:name=".A31Activity" />
+        <activity android:name=".A23Activity" />
+        <activity android:name=".A22Activity" />
+        <activity android:name=".A21Activity" />
+        <activity android:name=".A141Activity" />
+        <activity android:name=".A133Activity" />
+        <activity android:name=".A132Activity" />
+        <activity android:name=".A131Activity" />
+        <activity android:name=".A124Activity" />
+        <activity android:name=".A123Activity" />
+        <activity android:name=".A122Activity" />
+        <activity android:name=".A121Activity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_identitas" />
+        <activity
+            android:name=".IdentitasActivity"
+            android:label="@string/app_identitas" />
+        <activity
+            android:name=".RuasActivity"
+            android:label="@string/app_ruas"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SegmenActivity"
+            android:label="@string/app_segmen" />
+        <activity
+            android:name=".PointActivity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A1Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A2Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A3Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A4Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A5Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A6AActivity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A6BActivity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A11Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A116Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A115Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A114Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A113Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A112Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A111Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A14Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A13Activity"
+            android:label="@string/app_point" />
+        <activity
+            android:name=".A12Activity"
+            android:label="@string/app_point" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

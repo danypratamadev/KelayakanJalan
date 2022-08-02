@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/edit"
+        android:title="Edit Provinsi"
+        android:icon="@drawable/ic_mode_edit_blue_300_18dp"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/upload"
+        android:title="Upload Provinsi"
+        android:icon="@drawable/ic_file_upload_orange_300_18dp"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/delete"
+        android:title="Delete Provinsi"
+        android:icon="@drawable/ic_delete_red_300_18dp"
+        android:enabled="true"
+        />
+
+</menu>

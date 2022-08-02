@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/back_alert_parent"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/fengardoneue_regular"
+        android:text="TAMBAH SEGMEN BARU"
+        android:textColor="@color/WindowBgActiveDark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TISEG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="2.5dp"
+            android:hint="Segmen"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:helperText="ex: 01">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SEG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLength="2"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIPSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="2.5dp"
+            android:hint="Panjang Segmen"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:helperText="ex: 5 (dalam Km)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PSG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLength="4"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIDPSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="2.5dp"
+            android:hint="Dari Km"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:helperText="ex: 1+300">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/DPSG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLength="7"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIKPSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="2.5dp"
+            android:hint="Sampai Km"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:helperText="ex: 6+300">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/KPSG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLength="7"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIDKT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dari Kota"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:helperText="ex: Surakarta">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/DKT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:singleLine="true"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.eyalbira.loadingdots.LoadingDots
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:LoadingDots_auto_play="true"
+        app:LoadingDots_dots_color="@color/WindowBgActiveDark"
+        app:LoadingDots_dots_count="5"
+        app:LoadingDots_dots_size="10dp"
+        app:LoadingDots_dots_space="5dp"
+        app:LoadingDots_loop_duration="1000"
+        app:LoadingDots_loop_start_delay="100"
+        app:LoadingDots_jump_duration="500"
+        app:LoadingDots_jump_height="8dp"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/img_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_done_white_18dp"
+        android:background="@drawable/img_style"
+        android:backgroundTint="@color/WindowBgActiveDark"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray300"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/White100T"
+            android:layout_weight="1"
+            android:textColor="@color/Gray700"
+            android:text="cancel"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/fengardoneue_regular"/>
+
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/Gray300"/>
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/White100T"
+            android:textColor="@color/WindowBgActiveDark"
+            android:layout_weight="1"
+            android:text="add"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/fengardoneue_regular"/>
+
+    </LinearLayout>
+
+</LinearLayout>

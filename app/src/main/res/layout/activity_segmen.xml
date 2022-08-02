@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gray100"
+    tools:context=".SegmenActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_3"
+        android:elevation="0.5dp">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:background="@color/White100T"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/fontku"
+                android:text="LAIK JALAN"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                android:paddingTop="3dp"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/sub_title"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_3"
+        android:paddingTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/NRU_DIS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fengardoneue_regular"
+            android:text="RUAS: Duwet - Giriwoyo"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="90dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/NOR_DIS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Ruas: 5"
+                    android:textSize="11sp"
+                    android:paddingLeft="0.5dp"
+                    android:textColor="@color/Light"/>
+
+                <TextView
+                    android:id="@+id/PRU_DIS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="11sp"
+                    android:paddingLeft="0.5dp"
+                    android:textColor="@color/Light"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/detail"
+                android:layout_width="80dp"
+                android:layout_height="33dp"
+                android:text="Details"
+                android:textSize="12sp"
+                android:textColor="@color/WindowBgActiveDark"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/sansui_regular"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_load"
+                android:backgroundTint="@color/White"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sub_title"
+        app:duration="500"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/load_segmen_layout" />
+            <include layout="@layout/load_segmen_layout" />
+            <include layout="@layout/load_segmen_layout" />
+            <include layout="@layout/load_segmen_layout" />
+            <include layout="@layout/load_segmen_layout" />
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/data"
+        android:layout_below="@id/sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_alert"
+                android:layout_margin="20dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/satu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belum ada segmen"
+                        android:textColor="@color/Red300"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Tekan "
+                            android:textColor="@color/Gray500"
+                            android:textSize="11dp"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_add_blue_600_18dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text=" untuk menambah data segmen"
+                            android:textColor="@color/Gray500"
+                            android:textSize="11dp"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/segmen_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_centerHorizontal="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_seg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_white_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/alertdownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/White"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/Gray300"
+            tools:ignore="Suspicious0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please wait..."
+                android:textColor="@color/Gray800"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansui_regular"
+                android:layout_weight="1"/>
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/Gray500" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nama_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Downloading..."
+            android:textColor="@color/Gray700"
+            android:textSize="13sp"
+            android:fontFamily="@font/sansui_regular"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="80dp"/>
+
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            android:id="@+id/percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginTop="10dp"
+            app:progress_unreached_color="@color/Gray400"
+            app:progress_reached_color="@color/Green400"
+            app:progress_unreached_bar_height="3dp"
+            app:progress_reached_bar_height="4dp"
+            app:progress_max="100"
+            app:progress_text_color="@color/Green400"
+            app:progress_text_visibility="visible"/>
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="downloading a111..."
+            android:textColor="@color/Green400"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/sansui_regular"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

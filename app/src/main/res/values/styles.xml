@@ -1,0 +1,99 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/WindowBgActiveDark</item>
+        <item name="colorPrimaryDark">@color/WindowBgActiveDark</item>
+        <item name="colorAccent">@color/WindowBgActiveDark</item>
+        <item name="android:fontFamily">@font/sansui_regular</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:showDividers">none</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:dropDownSelector">@android:color/white</item>
+        <item name="android:textColor">@color/Gray900</item>
+        <item name="android:fontFamily">@font/sansui_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="spinner_style2">
+        <item name="android:showDividers">none</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:dropDownSelector">@android:color/white</item>
+        <item name="android:background">@color/White</item>
+        <item name="android:textColor">@color/Blue900</item>
+        <item name="android:fontFamily">@font/sansui_regular</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="animate_success">
+        <item name="android:windowEnterAnimation">@anim/bounce</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="animate_point">
+        <item name="android:windowEnterAnimation">@anim/slide_up2</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="animate_default">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="TabItemStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:fontFamily">@font/sansui_regular</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">#d1d1d1</item>
+        <item name="android:dividerHeight">0.5dp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">10dp</item>
+        <item name="android:fontFamily">@font/sansui_regular</item>
+    </style>
+
+    <style name="MyPopupStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/Gray700</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">2dp</item>
+    </style>
+
+    <style name="DialogTheme" parent="android:Theme.Dialog">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/back_bottom_option</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up3</item>
+        <item name="android:windowExitAnimation">@anim/slide_down3</item>
+    </style>
+
+</resources>

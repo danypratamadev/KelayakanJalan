@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/kordinat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    tools:context=".AdministrasiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_3">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                android:background="@color/White100T"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/fontku"
+                android:text="LAIK JALAN"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                android:paddingTop="3dp"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:orientation="horizontal"
+            android:background="@color/White"
+            android:focusableInTouchMode="true"
+            android:paddingTop="25dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp"
+            android:focusable="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sansui_regular"
+                android:text="B. ADMINISTRASI JALAN"
+                android:textColor="@color/Gray900"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/ktg_klf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fengardoneue_regular"
+                android:text="HASIL"
+                android:textColor="@color/Gray900"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="0.5"
+                android:textAlignment="center"
+                android:layout_centerVertical="true"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/sub_title"
+            android:background="@color/Gray300"/>
+
+        <com.chauthai.overscroll.RecyclerViewBouncy
+            android:id="@+id/admin_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            app:tension="1000"
+            app:friction="200"
+            app:gapLimit="220"
+            app:speedFactor="5"
+            app:viewCountEstimateSize="5"
+            app:maxAdapterSizeToEstimate="20">
+
+
+        </com.chauthai.overscroll.RecyclerViewBouncy>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/admin_recycler">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:id="@+id/INPUT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DOKUMEN PENETAPAN, PETUNJUK, PERINTAH\nDAN LARANGAN"
+                        android:textColor="@color/Black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/fengardoneue_regular"
+                        android:paddingLeft="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketersediaan"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKTD"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/ketersediaan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kelengkapan informasi"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKLI"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/kelengkapan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Legalitas"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SLGT"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/legalitas"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rekomendasi"
+                        android:layout_marginTop="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:helperText="*Optional"
+                        app:counterMaxLength="500"
+                        app:counterEnabled="true"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/REC"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:textSize="14sp"
+                            android:gravity="left|top"
+                            android:inputType="textMultiLine"
+                            android:maxLength="500"
+                            android:textAlignment="textStart"
+                            tools:ignore="RtlCompat" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/Gray300"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DOKUMEN PENETAPAN STATUS JALAN"
+                        android:textColor="@color/Black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/fengardoneue_regular"
+                        android:paddingLeft="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketersediaan"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKTD2"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/ketersediaan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kelengkapan informasi"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKLI2"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/kelengkapan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Legalitas"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SLGT2"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/legalitas"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rekomendasi"
+                        android:layout_marginTop="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:helperText="*Optional"
+                        app:counterMaxLength="500"
+                        app:counterEnabled="true"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/REC2"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:textSize="14sp"
+                            android:gravity="left|top"
+                            android:inputType="textMultiLine"
+                            android:maxLength="500"
+                            android:textAlignment="textStart"
+                            tools:ignore="RtlCompat" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/Gray300"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DOKUMEN PENETAPAN KELAS JALAN"
+                        android:textColor="@color/Black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/fengardoneue_regular"
+                        android:paddingLeft="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketersediaan"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKTD3"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/ketersediaan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kelengkapan informasi"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKLI3"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/kelengkapan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Legalitas"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SLGT3"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/legalitas"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rekomendasi"
+                        android:layout_marginTop="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:helperText="*Optional"
+                        app:counterMaxLength="500"
+                        app:counterEnabled="true"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/REC3"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:textSize="14sp"
+                            android:gravity="left|top"
+                            android:inputType="textMultiLine"
+                            android:maxLength="500"
+                            android:textAlignment="textStart"
+                            tools:ignore="RtlCompat" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/Gray300"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DOKUMEN PENETAPAN KEPEMILIKAN TANAH"
+                        android:textColor="@color/Black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/fengardoneue_regular"
+                        android:paddingLeft="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketersediaan"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKTD4"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/ketersediaan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kelengkapan informasi"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKLI4"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/kelengkapan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Legalitas"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SLGT4"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/legalitas"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rekomendasi"
+                        android:layout_marginTop="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:helperText="*Optional"
+                        app:counterMaxLength="500"
+                        app:counterEnabled="true"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/REC4"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:textSize="14sp"
+                            android:gravity="left|top"
+                            android:inputType="textMultiLine"
+                            android:maxLength="500"
+                            android:textAlignment="textStart"
+                            tools:ignore="RtlCompat" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/Gray300"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DOKUMEN PENETAPAN LEGER JALAN"
+                        android:textColor="@color/Black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/fengardoneue_regular"
+                        android:paddingLeft="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketersediaan"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKTD5"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/ketersediaan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kelengkapan informasi"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKLI5"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/kelengkapan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Legalitas"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SLGT5"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/legalitas"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rekomendasi"
+                        android:layout_marginTop="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:helperText="*Optional"
+                        app:counterMaxLength="500"
+                        app:counterEnabled="true"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/REC5"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:textSize="14sp"
+                            android:gravity="left|top"
+                            android:inputType="textMultiLine"
+                            android:maxLength="500"
+                            android:textAlignment="textStart"
+                            tools:ignore="RtlCompat" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/Gray300"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DOKUMEN AMDAL/DOKUMEN LINGKUNGAN"
+                        android:textColor="@color/Black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/fengardoneue_regular"
+                        android:paddingLeft="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketersediaan"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKTD6"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/ketersediaan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kelengkapan informasi"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SKLI6"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/kelengkapan"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Legalitas"
+                            android:textColor="@color/Gray700"
+                            android:textSize="13sp"
+                            android:paddingLeft="5dp"/>
+
+                        <Spinner
+                            android:id="@+id/SLGT6"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:entries="@array/legalitas"
+                            android:background="@drawable/edit_text"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/spinner_style">
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="* Pilih salah satu"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/sansui_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="1dp"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rekomendasi"
+                        android:layout_marginTop="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:helperText="*Optional"
+                        app:counterMaxLength="500"
+                        app:counterEnabled="true"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/REC6"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:textSize="14sp"
+                            android:gravity="left|top"
+                            android:inputType="textMultiLine"
+                            android:maxLength="500"
+                            android:textAlignment="textStart"
+                            tools:ignore="RtlCompat" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/Gray300"/>
+
+                    <Button
+                        android:id="@+id/SAVE"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/btn_style"
+                        android:fontFamily="@font/fengardoneue_regular"
+                        android:layout_marginTop="30dp"
+                        android:text="Simpan"
+                        android:textAlignment="center"
+                        android:textColor="@color/White"
+                        android:textSize="14sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="30dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/aksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true">
+
+            <com.github.jorgecastilloprz.FABProgressCircle
+                android:id="@+id/fab_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                app:finalIcon="@drawable/ic_done_white_18dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_file_upload_white_18dp"
+                    android:layout_margin="5dp"/>
+
+            </com.github.jorgecastilloprz.FABProgressCircle>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fab_upload"
+                android:src="@drawable/ic_mode_edit_white_18dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

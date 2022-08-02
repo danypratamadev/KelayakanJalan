@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/kjl_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kerataan Jalan"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/kjl_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/kjl_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/kjl_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/klb_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kedalaman Lubang"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray800"
+                android:textSize="14sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="Diameter : "
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/kdl_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/kdl_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray800"
+                android:textSize="14sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="Kedalaman : "
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/kkl_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/kkl_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/klb_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ilb_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Intensitas Lubang"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/ilb_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/ilb_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/ilb_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lbr_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Lebar Retak"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/lbr_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/lbr_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/lbr_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/irt_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Intensitas Retak"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/irt_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/irt_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/irt_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kal2_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kedalaman Alur"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray800"
+                android:textSize="14sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="Alur Dangkal : "
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/kal_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/kal_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray800"
+                android:textSize="14sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="Alur Dalam : "
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/kam_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/kam_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/kal2_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ial_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Intensitas Alur"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/ial_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/ial_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/ial_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tpk_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Tekstur Perkerasan"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/tpk_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/tpk_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/tpk_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/asm_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Aspal Meleleh"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Uji Lapangan"/>
+
+                <TextView
+                    android:id="@+id/asm_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Deviasi" />
+
+                <TextView
+                    android:id="@+id/asm_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray500"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Kategori Laik Fungsi"/>
+
+                <TextView
+                    android:id="@+id/asm_hasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray900"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="-"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rec_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@drawable/success_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Rekomendasi"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray800"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Hasil Akhir"
+                    android:textAlignment="textEnd"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rec_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray900"
+                android:textSize="12sp"
+                android:fontFamily="@font/sansui_regular"
+                android:text="-"
+                android:textAlignment="textStart"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/FT1"
+                    android:layout_width="210dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/back_foto"
+                    android:layout_margin="5dp"/>
+
+                <ImageView
+                    android:id="@+id/FT2"
+                    android:layout_width="210dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/back_foto"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/back_ruas"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/NRU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fengardoneue_regular"
+                android:text="Ruas: Duwet - Giriwoyo"
+                android:textColor="@color/Gray800"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginRight="60dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/PRU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sansui_regular"
+                android:text="24,0 KM"
+                android:textColor="@color/Orange300"
+                android:textSize="11sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/Gray300"
+            android:layout_marginTop="8dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/PJL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sansui_regular"
+                android:text="Balai : *Tambahkan Balai !"
+                android:textColor="@color/Gray800"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/PKK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/PJL"
+                android:fontFamily="@font/sansui_regular"
+                android:text="PPK : "
+                android:textColor="@color/Gray800"
+                android:textSize="11sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/PKK">
+
+                <TextView
+                    android:id="@+id/NOR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Nomor Ruas : 074"
+                    android:textColor="@color/Gray500"
+                    android:textSize="11sp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/KM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="KM 77+300 - KM 101+300"
+                    android:textColor="@color/Gray500"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/KTA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sansui_regular"
+                    android:text="Provinsi :"
+                    android:textColor="@color/Gray500"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/Gray300"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true">
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/spin_kit"
+                    style="@style/SpinKitView.Small.RotatingCircle"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    app:SpinKit_Color="@color/Red300"/>
+
+                <View
+                    android:id="@+id/indicator"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/color_befor"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mulai uji laik fungsi"
+                    android:textSize="11sp"
+                    android:textColor="@color/Gray500"
+                    android:fontFamily="@font/sansui_regular"
+                    android:layout_marginLeft="5dp"
+                    android:paddingTop="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <Button
+                    android:id="@+id/upload"
+                    android:layout_width="55dp"
+                    android:layout_height="27dp"
+                    android:layout_marginRight="10dp"
+                    android:text="UPLOAD"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/back_btn_green"
+                    android:textColor="@color/White"
+                    android:fontFamily="@font/fengardoneue_regular"/>
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_width="55dp"
+                    android:layout_height="27dp"
+                    android:layout_marginRight="10dp"
+                    android:text="EDIT"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/back_btn_blue"
+                    android:textColor="@color/White"
+                    android:fontFamily="@font/fengardoneue_regular"/>
+
+                <Button
+                    android:id="@+id/hapus"
+                    android:layout_width="55dp"
+                    android:layout_height="27dp"
+                    android:text="HAPUS"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/back_btn_red"
+                    android:textColor="@color/White"
+                    android:fontFamily="@font/fengardoneue_regular"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

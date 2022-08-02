@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_2"
+    tools:context=".SplashActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LAIK JALAN"
+        android:textColor="@color/White"
+        android:fontFamily="@font/fontku"
+        android:textSize="22dp"
+        android:layout_above="@+id/load"
+        android:layout_centerHorizontal="true"
+        />
+
+    <com.eyalbira.loadingdots.LoadingDots
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:LoadingDots_auto_play="true"
+        app:LoadingDots_dots_color="@color/White"
+        app:LoadingDots_dots_count="7"
+        app:LoadingDots_dots_size="10dp"
+        app:LoadingDots_dots_space="5dp"
+        app:LoadingDots_loop_duration="1000"
+        app:LoadingDots_loop_start_delay="100"
+        app:LoadingDots_jump_duration="500"
+        app:LoadingDots_jump_height="8dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="com.pratama.dany.laik-jalan"
+        android:textColor="@color/White"
+        android:fontFamily="@font/sansui_regular"
+        android:textSize="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>

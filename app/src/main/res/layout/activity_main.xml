@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_3"
+        android:elevation="0.5dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_laik_jalan"
+            android:background="@drawable/back_alert_parent"
+            android:padding="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp">
+
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/fontku"
+                android:text="LAIK JALAN"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                android:paddingTop="3dp"
+                android:paddingLeft="15dp"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <ImageButton
+                android:id="@+id/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_settings_white_24dp"
+                android:background="@color/White100T"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/topPanell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_back"
+                    android:elevation="5dp">
+
+                    <RelativeLayout
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/road"
+                            android:scaleType="fitStart" />
+
+                        <TextView
+                            android:id="@+id/satu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/fengardoneue_regular"
+                            android:layout_marginTop="40dp"
+                            android:text="IDENTIFIKASI DAN EVALUASI"
+                            android:textColor="@color/White"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:layout_marginRight="20dp"
+                            android:textStyle="bold"
+                            android:layout_alignParentRight="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/satu"
+                            android:fontFamily="@font/fengardoneue_regular"
+                            android:text="HASIL UJI LAIK FUNGSI JALAN"
+                            android:textColor="@color/White"
+                            android:textSize="13sp"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="15dp"
+                        android:background="@drawable/back_menu"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="130dp"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@id/judul"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="17dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_location_on_grey_800_24dp"
+                                android:tint="@color/Blue400"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/fengardoneue_regular"
+                                android:text="DAFTAR PROVINSI"
+                                android:paddingTop="2dp"
+                                android:gravity="center"
+                                android:textColor="@color/Blue400"
+                                android:textSize="14sp"
+                                android:textAlignment="textStart"
+                                android:textStyle="bold"
+                                android:layout_weight="1"
+                                tools:ignore="RtlCompat"
+                                android:paddingStart="5dp"/>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@id/judul"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/Gray300"/>
+
+                        <LinearLayout
+                            android:id="@+id/icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/line"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/add_prov"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/back_icon"
+                                    android:src="@drawable/ic_add_blue_400_24dp"
+                                    android:padding="5dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sansui_regular"
+                                    android:text="Tambah baru"
+                                    android:paddingTop="2dp"
+                                    android:gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/Blue400"
+                                    android:textSize="11sp"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/orderby"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/back_icon"
+                                    android:src="@drawable/ic_sort_blue_400_24dp"
+                                    android:padding="5dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sansui_regular"
+                                    android:text="Urutkan A-Z"
+                                    android:paddingTop="2dp"
+                                    android:gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/Blue400"
+                                    android:textSize="11sp"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/search"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/back_icon"
+                                    android:src="@drawable/ic_search_blue_400_24dp"
+                                    android:padding="5dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sansui_regular"
+                                    android:text="Cari provinsi"
+                                    android:layout_marginTop="5dp"
+                                    android:paddingTop="2dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/Blue400"
+                                    android:textSize="11sp"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true">
+
+                    <EditText
+                        android:id="@+id/cari_prov"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sansui_regular"
+                        android:text="Semua Provinsi"
+                        android:animateLayoutChanges="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/Gray800"
+                        android:textSize="14sp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textStyle="bold"
+                        android:background="@color/White100T"
+                        android:enabled="false"/>
+
+                    <ImageButton
+                        android:id="@+id/clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_close_red_400_18dp"
+                        android:background="@color/White100T"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/Gray400"/>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/pro_load"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:duration="500"
+                    android:padding="3dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/prov_shimer"/>
+                        <include layout="@layout/prov_shimer"/>
+                        <include layout="@layout/prov_shimer"/>
+                        <include layout="@layout/prov_shimer"/>
+                        <include layout="@layout/prov_shimer"/>
+                        <include layout="@layout/prov_shimer"/>
+                        <include layout="@layout/prov_shimer"/>
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pro_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/White"
+                    android:scrollbars="vertical">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray400"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="com.pratama.dany.laik-jalan"
+                        android:textColor="@color/Gray600"
+                        android:fontFamily="@font/sansui_regular"
+                        android:textSize="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="30dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

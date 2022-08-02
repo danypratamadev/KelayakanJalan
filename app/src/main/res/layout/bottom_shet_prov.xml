@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="5dp"
+        android:background="@drawable/back_strip"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/nmpro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sansui_regular"
+        android:text="Jawa Barat"
+        android:textColor="@color/Gray900"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="center"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:ignore="RtlCompat"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray300"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@drawable/menu_click">
+
+        <ImageView
+            android:id="@+id/edit_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mode_edit_blue_300_18dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/edit_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sansui_regular"
+            android:text="Edit"
+            android:textColor="@color/Gray900"
+            android:textSize="13sp"
+            android:layout_marginStart="20dp"
+            android:textAlignment="textStart"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray300"
+        android:layout_marginStart="40dp"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@drawable/menu_click">
+
+        <ImageView
+            android:id="@+id/delete_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_red_300_18dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/delete_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sansui_regular"
+            android:text="Delete"
+            android:textColor="@color/Gray900"
+            android:textSize="13sp"
+            android:layout_marginStart="20dp"
+            android:textAlignment="textStart"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray300"
+        android:layout_marginStart="40dp"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@drawable/menu_click">
+
+        <ImageView
+            android:id="@+id/upload_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_file_upload_orange_300_18dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/upload_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sansui_regular"
+            android:text="Upload"
+            android:textColor="@color/Gray900"
+            android:textSize="13sp"
+            android:layout_marginStart="20dp"
+            android:textAlignment="textStart"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray300"
+        android:layout_marginStart="40dp"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@drawable/menu_click">
+
+        <ImageView
+            android:id="@+id/download_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_file_download_green_300_18dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/download_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sansui_regular"
+            android:text="Download"
+            android:textColor="@color/Gray900"
+            android:textSize="13sp"
+            android:layout_marginStart="20dp"
+            android:textAlignment="textStart"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray300"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="50dp"/>
+
+</LinearLayout>

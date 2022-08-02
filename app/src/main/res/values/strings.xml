@@ -1,0 +1,233 @@
+<resources>
+    <string name="app_name">Laik Jalan</string>
+    <string name="app_identitas">Identitas Jalan</string>
+    <string name="app_ruas">Ruas Jalan</string>
+    <string name="app_segmen">Daftar Segmen</string>
+    <string name="app_point">Uji Laik Fungsi</string>
+    <string-array name="size">
+        <item>> 150 Kb</item>
+        <item>> 200 Kb</item>
+        <item>> 300 Kb</item>
+        <item>> 400 Kb</item>
+        <item>> 500 Kb</item>
+        <item>> 600 Kb</item>
+        <item>> 700 Kb</item>
+        <item>> 800 Kb</item>
+        <item>> 900 Kb</item>
+        <item>> 1 Mb</item>
+    </string-array>
+    <string-array name="tabel">
+        <item>A111</item>
+        <item>A112</item>
+        <item>A113</item>
+        <item>A114</item>
+        <item>A115</item>
+        <item>A116</item>
+        <item>A121</item>
+        <item>A122</item>
+        <item>A123</item>
+        <item>A124</item>
+        <item>A131</item>
+        <item>A132</item>
+        <item>A133</item>
+        <item>A141</item>
+        <item>A21</item>
+        <item>A22</item>
+        <item>A23</item>
+        <item>A31</item>
+        <item>A32</item>
+        <item>A33</item>
+        <item>A34</item>
+        <item>A35</item>
+        <item>A36</item>
+        <item>A41</item>
+        <item>A42</item>
+        <item>A43</item>
+        <item>A51</item>
+        <item>A52</item>
+        <item>A53</item>
+        <item>A54</item>
+        <item>A55</item>
+        <item>A56</item>
+        <item>A57</item>
+        <item>A6a1</item>
+        <item>A6a2</item>
+        <item>A6a3</item>
+        <item>A6a4</item>
+        <item>A6a5</item>
+        <item>A6a6</item>
+        <item>A6a7</item>
+        <item>A6b1</item>
+        <item>A6b2</item>
+        <item>A6b3</item>
+        <item>A6b4</item>
+        <item>A6b5</item>
+        <item>A6b6</item>
+        <item>A6b7</item>
+        <item>A6b8</item>
+    </string-array>
+    <string-array name="sistem_jaringan">
+        <item>Pilih salah satu</item>
+        <item>Primer (Antar Kota)</item>
+        <item>Sekunder (Dalam Kota)</item>
+    </string-array>
+    <string-array name="status">
+        <item>Pilih salah satu</item>
+        <item>Nasional</item>
+        <item>Provinsi</item>
+        <item>Kabupaten</item>
+        <item>Kota</item>
+        <item>Desa</item>
+    </string-array>
+    <string-array name="fungsi">
+        <item>Pilih salah satu</item>
+        <item>Arteri</item>
+        <item>Kolektor</item>
+        <item>Lokal</item>
+        <item>Lingkungan</item>
+    </string-array>
+    <string-array name="kelas_prasarana">
+        <item>Pilih salah satu</item>
+        <item>Jalan Bebas Hambatan (JBH)</item>
+        <item>Jalan Raya (JR)</item>
+        <item>Jalan Sedang (JS)</item>
+        <item>Jalan Kecil (JK)</item>
+    </string-array>
+    <string-array name="kelas_penggunaan">
+        <item>Pilih salah satu</item>
+        <item>Kelas I</item>
+        <item>Kelas II</item>
+        <item>Kelas III</item>
+        <item>Kelas Khusus</item>
+    </string-array>
+    <string-array name="medan_Jalan">
+        <item>Pilih salah satu</item>
+        <item>Datar (D)</item>
+        <item>Bukit (B)</item>
+        <item>Gunung (G)</item>
+    </string-array>
+    <string-array name="tipe_median">
+        <item>Median Datar</item>
+        <item>Median Diturunkan</item>
+        <item>Median Ditinggikan</item>
+    </string-array>
+    <string-array name="bentuk_selokan">
+        <item>Trapesium</item>
+        <item>Segitiga</item>
+        <item>Segiempat</item>
+        <item>Lingkaran</item>
+        <item>Tidak Ada</item>
+    </string-array>
+    <string-array name="pengamanan">
+        <item>Tembok Penahan</item>
+        <item>Brojong</item>
+        <item>Tiang</item>
+        <item>Teknik Pengaturan Tanah</item>
+        <item>Dinding Penopang Jalan Batu</item>
+        <item>Tidak Ada, Tidak Diperlukan</item>
+        <item>Tidak Ada, Tapi Diperlukan</item>
+    </string-array>
+    <string-array name="lingkungan">
+        <item>Permukiman</item>
+        <item>Komersial</item>
+        <item>Akses Terbatas</item>
+    </string-array>
+    <string-array name="keperluan">
+        <item>Ada</item>
+        <item>Tidak Ada</item>
+        <item>Tidak Perlu</item>
+    </string-array>
+    <string-array name="cara_akses">
+        <item>Melalui Bukaan pada samping ke Jalur Utama</item>
+        <item>Menggunakan APILL</item>
+        <item>Langsung dengan Pengendalian Lalu Lintas</item>
+        <item>Langsung tanpa Pengendalian Lalu Lintas</item>
+        <item>Tidak Ada</item>
+        <item>Tidak Perlu</item>
+    </string-array>
+    <string-array name="cara_akses2">
+        <item>Melalui Bukaan pada samping ke Jalur Utama</item>
+        <item>Langsung dengan dilengkapi Fasilitas Manajemen Lalu Lintas</item>
+        <item>Langsung tanpa dilengkapi Fasilitas Manajemen Lalu Lintas</item>
+        <item>Tidak Ada</item>
+    </string-array>
+    <string-array name="jenis_kota">
+        <item>Antar Kota</item>
+        <item>Dalam Kota</item>
+    </string-array>
+    <string-array name="kecepatan">
+        <item>60 Km/jam</item>
+        <item>40 Km/jam</item>
+        <item>30 Km/jam</item>
+        <item>20 Km/jam</item>
+    </string-array>
+    <string-array name="perkerasan">
+        <item>Perkerasan Lentur</item>
+        <item>Perkerasan Kaku</item>
+    </string-array>
+    <string-array name="opsional">
+        <item>Ada</item>
+        <item>Tidak Ada</item>
+        <item>Tidak Perlu</item>
+    </string-array>
+    <string-array name="bahan_dinding">
+        <item>Pasir Halus</item>
+        <item>Lempung Kepasiran</item>
+        <item>Lanau Alluvial</item>
+        <item>Kerikil Halus</item>
+        <item>Lempung Kokoh</item>
+        <item>Lempung Padat</item>
+        <item>Kerikil Kasar</item>
+        <item>Batu-batu Besar</item>
+        <item>Pasangan Batu</item>
+        <item>Beton</item>
+        <item>Beton Bertulang</item>
+        <item>Tidak Ada</item>
+    </string-array>
+    <string-array name="bentu_pulau">
+        <item>Segitiga</item>
+        <item>Persegi Panjang</item>
+        <item>Tidak Ada</item>
+    </string-array>
+    <string-array name="warna_kerb">
+        <item>Reflektif</item>
+        <item>Tidak Reflektif</item>
+        <item>Tidak Perlu</item>
+    </string-array>
+    <string-array name="kelengkapan">
+        <item>Lengkap</item>
+        <item>Belum Lengkap</item>
+    </string-array>
+    <string-array name="ketersediaan">
+        <item>Ada</item>
+        <item>Tidak Ada</item>
+    </string-array>
+    <string-array name="legalitas">
+        <item>Legal</item>
+        <item>Tidak Legal</item>
+    </string-array>
+    <string-array name="lebar_jalur">
+        <item>2 x 14 m</item>
+        <item>2 x 11 m</item>
+        <item>2 x 7 m</item>
+        <item>7 m</item>
+        <item>5.5 m</item>
+        <item>2.5 m</item>
+    </string-array>
+    <string-array name="bahan_jembatan">
+        <item>Batubata</item>
+        <item>Beton</item>
+        <item>Baja</item>
+        <item>Kayu</item>
+    </string-array>
+    <string-array name="struktur_perkerasan">
+        <item>Super Paved</item>
+        <item>Beton Semen</item>
+        <item>Baton Aspal</item>
+        <item>Perkerasan Beraspal</item>
+        <item>Jalan Krikil</item>
+        <item>Tanah</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

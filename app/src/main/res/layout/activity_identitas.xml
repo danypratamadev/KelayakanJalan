@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:context=".IdentitasActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_3"
+        android:elevation="3dp">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:background="@color/White100T"/>
+
+        <TextView
+            android:id="@+id/NRU_DIS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fengardoneue_regular"
+            android:text="TAMBAH RUAS JALAN"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:paddingTop="3dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/form_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingTop="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="45dp"
+            android:background="@color/White"
+            android:elevation="2dp"
+            android:focusable="false"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:fontFamily="@font/fengardoneue_regular"
+                android:text="IDENTITAS RUAS JALAN"
+                android:textColor="@color/WindowBgActiveDark"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIPJL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Penyelenggara Jalan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:helperText="ex: Balai Besar Pelaksanaan Jalan Nasional (BPJN)-VII Semarang"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/PJL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/balai_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/back_recommend">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_history_blue_600_18dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Riwayat Balai Penyelenggara"
+                        android:textSize="11sp"
+                        android:textColor="@color/Blue600"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sansui_regular"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray300"/>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/balai_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isi field penyelenggara jika tidak ada"
+                    android:textSize="11sp"
+                    android:textColor="@color/Red300"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sansui_regular"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIPKK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PPK"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:helperText="*Required"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/PKK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/pkk_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/back_recommend">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_history_blue_600_18dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Riwayat PKK "
+                        android:textSize="11sp"
+                        android:textColor="@color/Blue600"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sansui_regular"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray300"/>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/pkk_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isi field PPK jika tidak ada"
+                    android:textSize="11sp"
+                    android:textColor="@color/Red300"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sansui_regular"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIPROV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Povinsi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:helperText="*Required"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/PROV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/prov_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/back_recommend">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_history_blue_600_18dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Riwayat Provinsi"
+                        android:textSize="11sp"
+                        android:textColor="@color/Blue600"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sansui_regular"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray300"/>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/prov_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isi field Provinsi jika tidak ada"
+                    android:textSize="11sp"
+                    android:textColor="@color/Red300"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sansui_regular"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TINRU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Ruas"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:helperText="ex: Duwet - Giriwoyo"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NRU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TINOR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2.5dp"
+                    android:hint="Nomor Ruas"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:helperText="ex: 074.11.2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/NOR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIPRU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp"
+                    android:hint="Panjang Ruas"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:helperText="ex: 24 (dalam Km)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/PRU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIDKM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2.5dp"
+                    android:hint="Dari Km"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:helperText="ex: 77+300">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/DKM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIKKM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp"
+                    android:hint="Ke Km"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:helperText="ex: 101+300">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/KKM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIKCP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Kecepatan Operasional"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:helperText="ex: 60 KM/Jam">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/KCP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray300"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/fengardoneue_regular"
+                android:text="KLASIFIKASI JALAN"
+                android:textColor="@color/WindowBgActiveDark"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sistem Jaringan"
+                    android:textColor="@color/Gray700"
+                    android:textSize="13sp"
+                    android:paddingLeft="5dp"/>
+
+                <Spinner
+                    android:id="@+id/SJR"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:entries="@array/sistem_jaringan"
+                    android:background="@drawable/edit_text"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/spinner_style">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/cap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="* Pilih salah satu"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sansui_regular"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2.5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:textColor="@color/Gray700"
+                        android:textSize="13sp"
+                        android:paddingLeft="5dp"/>
+
+                    <Spinner
+                        android:id="@+id/STS"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:entries="@array/status"
+                        android:background="@drawable/edit_text"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/spinner_style">
+                    </Spinner>
+
+                    <TextView
+                        android:id="@+id/cap2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* Pilih salah satu"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/sansui_regular"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="1dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fungsi"
+                        android:textColor="@color/Gray700"
+                        android:textSize="13sp"
+                        android:paddingLeft="5dp"/>
+
+                    <Spinner
+                        android:id="@+id/FNG"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:entries="@array/fungsi"
+                        android:background="@drawable/edit_text"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/spinner_style">
+                    </Spinner>
+
+                    <TextView
+                        android:id="@+id/cap3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* Pilih salah satu"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/sansui_regular"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="1dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas Prasarana"
+                    android:textColor="@color/Gray700"
+                    android:textSize="13sp"
+                    android:paddingLeft="5dp"/>
+
+                <Spinner
+                    android:id="@+id/KPR"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:entries="@array/kelas_prasarana"
+                    android:background="@drawable/edit_text"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/spinner_style">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/cap4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="* Pilih salah satu"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sansui_regular"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2.5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kelas Penggunaan"
+                        android:textColor="@color/Gray700"
+                        android:textSize="13sp"
+                        android:paddingLeft="5dp"/>
+
+                    <Spinner
+                        android:id="@+id/KPG"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:entries="@array/kelas_penggunaan"
+                        android:background="@drawable/edit_text"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/spinner_style">
+                    </Spinner>
+
+                    <TextView
+                        android:id="@+id/cap5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* Pilih salah satu"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/sansui_regular"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="1dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Medan Jalan"
+                        android:textColor="@color/Gray700"
+                        android:paddingLeft="5dp"
+                        android:textSize="13sp"/>
+
+                    <Spinner
+                        android:id="@+id/MJL"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:entries="@array/medan_Jalan"
+                        android:background="@drawable/edit_text"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/spinner_style">
+                    </Spinner>
+
+                    <TextView
+                        android:id="@+id/cap6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* Pilih salah satu"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/sansui_regular"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="1dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/SAVE"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_style"
+                android:fontFamily="@font/fengardoneue_regular"
+                android:text="Simpan"
+                android:textColor="@color/White"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
